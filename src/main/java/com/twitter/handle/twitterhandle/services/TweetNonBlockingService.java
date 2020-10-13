@@ -23,7 +23,7 @@ public class TweetNonBlockingService {
     @Autowired
     TweetsRepository repository;
 
-    public void getTweetsNonBlocking() {
+    public void startTwitterStream() {
         logger.info("Starting getTweetsNonBlocking!");
         Flux<String> tweetFlux = WebClient.create()
                 .get()
