@@ -7,7 +7,7 @@ Twitter Stream API :- https://api.twitter.com/2/tweets/search/stream?
 Rules API :- https://api.twitter.com/2/tweets/search/stream/rules  
 
 This uses MySQL Database for persisting the contionous streaming tweets. DB name - twitter Table - tweets  
-Attached script:- 
+Attached script:- [tweets.sql](https://github.com/Anshul14Sharma/Twitter-Stream-API-Spring-Boot/blob/main/tweets.sql)
 
 If you are running as the standalone application run the application using:-  
 ```mvn sprint-boot:run```  
