@@ -26,7 +26,7 @@ import java.util.Arrays;
 public class TwitterTokenService {
     private RestTemplate restTemplate;
     private TwitterConfig twitterConfig;
-    private static final Logger logger = LoggerFactory.getLogger(TweetService.class);
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     public TwitterTokenService(RestTemplate restTemplate, TwitterConfig twitterConfig) {

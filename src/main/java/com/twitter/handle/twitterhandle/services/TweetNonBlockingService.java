@@ -19,7 +19,7 @@ import reactor.core.publisher.Flux;
 
 @Service
 public class TweetNonBlockingService {
-    private static final Logger logger = LoggerFactory.getLogger(TweetService.class);
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
     @Autowired
     TweetsRepository repository;
 

@@ -16,7 +16,7 @@ import java.util.*;
 @Service
 public class RuleService {
     private RestTemplate restTemplate;
-    private static final Logger logger = LoggerFactory.getLogger(TweetService.class);
+    private static final Logger logger = LoggerFactory.getLogger(RuleService.class);
 
     @Autowired
     private RuleService(RestTemplate restTemplate) {

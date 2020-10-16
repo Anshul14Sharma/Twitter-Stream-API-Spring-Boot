@@ -29,7 +29,7 @@ public class TweetService {
 
     private RestTemplate restTemplate;
     private TweetsRepository repository;
-    private static final Logger logger = LoggerFactory.getLogger(TweetService.class);
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Value("${twitter.query.maxresult}")
     private String maxResult;
