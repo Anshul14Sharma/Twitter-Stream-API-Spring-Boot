@@ -4,7 +4,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sun.xml.internal.messaging.saaj.util.Base64;
 import com.twitter.handle.twitterhandle.config.TwitterConfig;
 import com.twitter.handle.twitterhandle.constants.ApplicationConstants;
 import org.slf4j.Logger;
@@ -21,6 +20,7 @@ import org.springframework.web.client.RestTemplate;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.Arrays;
+import java.util.Base64;
 
 @Service
 public class TwitterTokenService {
@@ -76,7 +76,7 @@ public class TwitterTokenService {
             String encodedConsumerSecret = URLEncoder.encode(consumerSecret, "UTF-8");
 
             String fullKey = encodedConsumerKey + ":" + encodedConsumerSecret;
-            byte[] encodedBytes = Base64.encode(fullKey.getBytes());
+            byte[] encodedBytes = Base64.getEncoder().encode(fullKey.getBytes());
             return new String(encodedBytes);
         } catch (UnsupportedEncodingException e) {
             return "";
